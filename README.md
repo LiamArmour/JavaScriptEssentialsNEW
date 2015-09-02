@@ -1,0 +1,2 @@
+# JavaScriptEssentialsNEW
+JavaScript Essentials Exercises 
