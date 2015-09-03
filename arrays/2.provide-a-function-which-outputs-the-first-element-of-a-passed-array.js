@@ -1,5 +1,15 @@
-'use strict'
-var cars = ["Saab", "Volvo", "BMW"];
-console.log(cars[0]);
+'use strict';
+function returnFirstElement(array, endOfArray) {
+    var values;
+    if(endOfArray !== undefined){
+        values = array.slice(0,endOfArray);
+        return values;
+    }
+    else {
+        return array[0];
+    }
+}
 
-//This runes the first element
+var cars = ["Saab", "Volvo", "BMW"];
+console.log(returnFirstElement(cars));
+console.log(returnFirstElement(cars, 3));
