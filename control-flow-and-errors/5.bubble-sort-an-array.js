@@ -1,41 +1,42 @@
 'use strict';
 
-function generateArray(numberOfValues, range) {
-    var array = [];
-    for (var numValues = 0 ; numValues < numberOfValues ; numValues++){
-        array.push(Math.round(Math.random()*range));
+var myArray = [];
+function genArray(numValues, range){
+    var anArray = [];
+    for( var i = 0; i < numValues; i++) {
+        anArray.push(Math.round(Math.random()*range));
     }
-    console.log(array);
-    return array;
+    return anArray;
 }
-
-function bubbleSort(array) {
-    var big,
-        small;
+function bubbleSort(array, numCalls){
+    console.log('called bubbleSort '+numCalls+' times.');
+    var big = 0;
+    var small = 0;
     var swapped = false;
-
-    for(var arrayCount = 0 ; arrayCount < array.length ; arrayCount++){
-        if((arrayCount+1) === array.length){
-            //continue;
-            console.log("cont");
+    for(var i = 0; i < array.length; i++) {
+        if( (i+1) === array.length ){
+            continue;
         }
-        if(array[arrayCount] < array[arrayCount+1]) {
-            big = array[arrayCount+1];
-            small = array[arrayCount];
-            console.log("swapping " + big + " with " + small);
-            array[arrayCount] = big;
-            array[arrayCount+1] = small;
+        if( array[i] < array[i+1] ) {
+            big = array[i+1];
+            small = array[i];
+            console.log('swapping ' + big + ' with ' + small);
+            array[i] = big;
+            array[i+1] = small;
             swapped = true;
         }
     }
     if(swapped) {
-        bubbleSort(array);
-    }else{
-        console.log("Final array " + array);
+        numCalls += 1;
+        console.log(array);
+        bubbleSort(array, numCalls);
+    }
+    else {
+        console.log('final array = '+array);
         return array;
     }
 }
 
-var liamArray = generateArray(10, 50);
-console.log("last " + liamArray);
-console.log(bubbleSort(liamArray));
+myArray = genArray(10, 100);
+console.log(myArray);
+bubbleSort(myArray, 1);
