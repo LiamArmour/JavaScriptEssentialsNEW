@@ -5,7 +5,8 @@ var calculation = function(boyName, girlName) {
 
     if(result > 100) {
         console.log(boyName + " loves " + girlName + " 100%")
-    } else {
+    }
+    else {
         console.log(boyName + " loves " + girlName  +  result + "%")
     }
 }
