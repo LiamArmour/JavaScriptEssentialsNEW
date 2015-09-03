@@ -1,4 +1,4 @@
 var string = "January,February,March,April,May,June,July,August,September,October,November,December";
-var array = string.split(',');
+var carsArray = string.split(',');
 
-console.log(array);
+console.log(carsArray);

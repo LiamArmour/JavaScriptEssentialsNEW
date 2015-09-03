@@ -1,4 +1,4 @@
 'use strict'
-var cars = ["Saab", "Volvo", "BMW"];
-var lastElementOfString = cars.pop();
-console.log(lastElementOfString);
+carsArray = ["Saab", "Volvo", "BMW"];
+
+console.log(carsArray[carsArray.length-1]);
