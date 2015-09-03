@@ -68,3 +68,5 @@ var controller = DIFramework.inject('controller');
 var controller2 = DIFramework.inject('controller2');
 controller.click();
 controller2.click();
+
+var
