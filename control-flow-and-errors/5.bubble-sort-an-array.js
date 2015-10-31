@@ -1,5 +1,4 @@
 'use strict';
-
 var myArray = [];
 function genArray(numValues, range){
     var anArray = [];
